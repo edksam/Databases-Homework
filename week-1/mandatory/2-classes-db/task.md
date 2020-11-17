@@ -55,10 +55,10 @@ When you have finished all of the questions - open a pull request with your answ
  CREATE TABLE classes (
   id         SERIAL PRIMARY KEY,
   student_id  INT references students(id),
-  mentor_id  INT references mentors(id),
+  mentor_id   INT references mentors(id),
   topic  VARCHAR(120) NOT NULL,
- location    VARCHAR(120) NOT NULL,
- datetaught   DATE NOT NULL
+  location    VARCHAR(120) NOT NULL,
+  datetaught   DATE NOT NULL
 );
 
 8. Insert a few classes in the `classes` table
