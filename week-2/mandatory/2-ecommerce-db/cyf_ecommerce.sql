@@ -14,9 +14,7 @@ CREATE TABLE customers (
 
 CREATE TABLE suppliers (
     id              SERIAL PRIMARY KEY,
-    supplier_name   VARCHAR(100) NOT NULL,
-    country         VARCHAR(20) NOT NULL
-);
+    supplier_name   VARCHAR(100) NOT NULL,\
 
 CREATE TABLE products (
     id             SERIAL PRIMARY KEY,
