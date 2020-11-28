@@ -60,5 +60,13 @@ Once you understand the database that you are going to work with, solve the foll
 9.  Retrieve all orders from customer named `Hope Crosby`
     select * from orders, customers where orders.customer_id = customers.id and customers.name = 'Hope Crosby';
 10. Retrieve all the products in the order `ORD006`. The result should only contain the columns `product_name`, `unit_price` and `quantity`.
+    select product_name, unit_price, quantity from products,orders,order_items WHERE order_items.order_id=orders.id AND order_items.product_id=products.id AND orders.order_reference='ORD006';
 11. Retrieve all the products with their supplier for all orders of all customers. The result should only contain the columns `name` (from customer), `order_reference` `order_date`, `product_name`, `supplier_name` and `quantity`.
+
+    --------------+-----------------+------------+-------------------------+---------------+----------
+ Guy Crawford | ORD001          | 2019-06-01 | Tee Shirt Olympic Games | Taobao        |        1
+ Hope Crosby  | ORD004          | 2019-05-24 | Mobile Phone X          | Sainsburys    |        1
+ Edan Higgins | ORD008          | 2019-07-23 | Tee Shirt Olympic Games | Amazon        |        1
+(3 rows)
 12. Retrieve the names of all customers who bought a product from a supplier from China.
+     select customers.name from customers,suppliers,orders,products,order_items where order_items.order_id=orders.id and order_items.product_id=products.id and customers.id=orders.customer_id and suppliers.id=products.id and suppliers.country='China';
