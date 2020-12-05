@@ -47,7 +47,6 @@ When you have finished all of the questions - open a pull request with your answ
        INSERT INTO STUDENTS(name, address, cyfgraduate) VALUES('John Jovi', '78 Obstruction Street,Glasgow', TRUE);
 6. Verify that the data you created for mentors and students are correctly stored in their respective tables (hint: use a `select` SQL statement).
 7. Create a new `classes` table to record the following information:
-
    - A class has a leading mentor
    - A class has a topic (such as Javascript, NodeJS)
    - A class is taught at a specific date and at a specific location
